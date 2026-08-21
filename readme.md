@@ -29,7 +29,7 @@ User Prompt → Gemini LLM → Generated Python Code → Docker Sandbox → Rend
 
 **Backend**
 - FastAPI — REST API
-- Google Gemini (`gemini-2.0-flash`) — code generation
+- Google Gemini (`gemini-3.1-flash-lite`) — code generation
 - Docker SDK for Python — sandbox orchestration
 - Python 3.11
 
