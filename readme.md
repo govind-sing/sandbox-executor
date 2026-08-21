@@ -45,25 +45,27 @@ User Prompt → Gemini LLM → Generated Python Code → Docker Sandbox → Rend
 ## Project structure
 
 sandbox-executor/
-├── sandbox/
-│ └── Dockerfile # sandbox image for code execution
-├── frontend/
-│ ├── Dockerfile
-│ ├── index.html
-│ ├── vite.config.js
-│ ├── tailwind.config.js
-│ ├── postcss.config.js
-│ ├── package.json
-│ └── src/
-│ ├── main.jsx
-│ ├── index.css
-│ └── App.jsx
-├── main.py # FastAPI app
-├── executor.py # Docker sandbox execution
-├── llm.py # Gemini integration
-├── requirements.txt
-├── Dockerfile # backend image
-└── docker-compose.yml
+│
+├── sandbox/              # 🔒 Secure execution environment
+│   └── Dockerfile
+│
+├── frontend/             # 🎨 React + Vite + Tailwind
+│   ├── src/
+│   │   ├── App.jsx       # Main application
+│   │   ├── main.jsx      # Entry point
+│   │   └── index.css     # Global styles
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── postcss.config.js
+│
+├── main.py               # ⚡ FastAPI server
+├── executor.py           # 🐳 Docker execution engine
+├── llm.py                # 🤖 Gemini integration
+├── requirements.txt      # 📦 Backend dependencies
+├── Dockerfile            # 🏗️ Backend image
+└── docker-compose.yml    # 🚀 Multi-container setup
 
 
 ## Prerequisites
