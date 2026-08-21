@@ -76,7 +76,7 @@ sandbox-executor/
 **1. Clone the repo**
 
 ```bash
-git clone https://github.com/your-username/sandbox-executor.git
+git clone https://github.com/govind-sing/sandbox-executor.git
 cd sandbox-executor
 ```
 
