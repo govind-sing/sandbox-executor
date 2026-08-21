@@ -42,30 +42,33 @@ User Prompt → Gemini LLM → Generated Python Code → Docker Sandbox → Rend
 - Resource limits: 256MB RAM, 50% CPU, no network access
 - Pre-installed: `matplotlib`, `pandas`, `numpy`, `pydub`, `reportlab`, `Pillow`, `scipy`, `seaborn`
 
-## Project structure
+
+
+## 📁 Project Structure
 
 sandbox-executor/
 │
-├── sandbox/              # 🔒 Secure execution environment
+├── 🐳 sandbox/                 # Secure execution environment
 │   └── Dockerfile
 │
-├── frontend/             # 🎨 React + Vite + Tailwind
+├── 🎨 frontend/                # React + Vite + Tailwind
 │   ├── src/
-│   │   ├── App.jsx       # Main application
-│   │   ├── main.jsx      # Entry point
-│   │   └── index.css     # Global styles
+│   │   ├── App.jsx             # Main application
+│   │   ├── main.jsx            # Entry point
+│   │   └── index.css           # Global styles
+│   │
 │   ├── index.html
 │   ├── package.json
 │   ├── vite.config.js
 │   ├── tailwind.config.js
 │   └── postcss.config.js
 │
-├── main.py               # ⚡ FastAPI server
-├── executor.py           # 🐳 Docker execution engine
-├── llm.py                # 🤖 Gemini integration
-├── requirements.txt      # 📦 Backend dependencies
-├── Dockerfile            # 🏗️ Backend image
-└── docker-compose.yml    # 🚀 Multi-container setup
+├── ⚡ main.py                  # FastAPI server
+├── 🐳 executor.py              # Docker execution engine
+├── 🤖 llm.py                   # Gemini integration
+├── 📦 requirements.txt         # Backend dependencies
+├── 🐳 Dockerfile               # Backend image
+└── 🚀 docker-compose.yml       # Multi-container setup
 
 
 ## Prerequisites
