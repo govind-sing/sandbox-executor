@@ -3,6 +3,7 @@ import json
 import re
 from google import genai
 from dotenv import load_dotenv
+import sys
 
 load_dotenv()
 
@@ -33,6 +34,8 @@ Rules for the code:
 - Do NOT read any external files
 - Do NOT make any network requests
 - The code must be completely self-contained
+- When the task requires real-world data (countries, populations, GDP, capitals, languages, etc.), you MUST hardcode realistic and approximate data directly in the code as Python lists or dictionaries. Do NOT use placeholder values, do NOT leave comments like 'add data here', do NOT assume any external file or API will be available. The code must be completely self-contained with the data embedded in it.
+- When hardcoding string data, always use double quotes for all strings in lists and dictionaries to avoid syntax errors with apostrophes in values like "N'Djamena" or "Côte d'Ivoire".
 """
 
 
@@ -61,6 +64,10 @@ def generate_code(prompt: str, context: str = "") -> dict:
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"^```\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
+
+    print(f"\n{'='*60}", flush=True)
+    print(f"[LLM RAW RESPONSE]:\n{raw}", flush=True)
+    print(f"{'='*60}\n", flush=True)
 
     parsed = json.loads(raw)
 
